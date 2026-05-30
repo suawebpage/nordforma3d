@@ -1,0 +1,115 @@
+/* =====================================================
+   index.css — NordForma3D
+   Estilos específicos da página Início (index.html).
+   Importa global.css primeiro.
+   ===================================================== */
+
+/* ─── HERO ───────────────────────────────────────── */
+.hero { padding: 72px 0 80px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-titulo em {
+  color: var(--blue-lt);
+  font-style: normal;
+}
+
+.hero-desc {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 440px;
+  margin-bottom: 32px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.hero-stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.hero-stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ─── DIFERENCIAIS STRIP ──────────────────────────── */
+.strip { background: var(--surface); padding: 56px 0; }
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.strip-item {
+  background: var(--surface);
+  padding: 28px 20px;
+  text-align: center;
+}
+.strip-icone { font-size: 1.8rem; margin-bottom: 10px; }
+.strip-titulo { font-weight: 700; font-size: .88rem; margin-bottom: 4px; }
+.strip-desc   { font-size: 12px; color: var(--muted); }
+
+/* ─── SERVIÇOS HOME PREVIEW ──────────────────────── */
+.servicos-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+}
+.servico-mini {
+  text-align: center;
+  text-decoration: none;
+}
+.servico-mini-icone { font-size: 2rem; margin-bottom: 12px; }
+.servico-mini-titulo { font-weight: 700; font-size: .9rem; }
+
+/* ─── SEO BLOCO ──────────────────────────────────── */
+.seo-bloco { text-align: center; max-width: 720px; margin: 0 auto; }
+
+/* ─── GALERIA PREVIEW ────────────────────────────── */
+.galeria-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.galeria-item {
+  aspect-ratio: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: border-color var(--tr);
+}
+.galeria-item:hover { border-color: #444; }
+
+/* ─── RESPONSIVIDADE ─────────────────────────────── */
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid > div:last-child { display: none; }
+}
+@media (max-width: 540px) {
+  .galeria-preview { grid-template-columns: repeat(3, 1fr); }
+  .hero-stats      { gap: 20px; }
+}

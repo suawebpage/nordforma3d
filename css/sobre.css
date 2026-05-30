@@ -1,0 +1,78 @@
+/* =====================================================
+   sobre.css — NordForma3D
+   Estilos específicos da página Sobre & FAQ.
+   ===================================================== */
+
+/* ─── SOBRE HERO ─────────────────────────────────── */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ─── CARD DE DIFERENCIAIS ───────────────────────── */
+.diferencial-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.diferencial-item:last-child { border-bottom: none; padding-bottom: 0; }
+.diferencial-check {
+  width: 20px; height: 20px;
+  background: rgba(37, 211, 102, .15);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.diferencial-txt { font-size: .9rem; }
+
+/* ─── ATUAÇÃO REGIONAL ───────────────────────────── */
+.regiao-bloco { max-width: 700px; }
+
+/* ─── FAQ ─────────────────────────────────────────── */
+.faq-lista { max-width: 720px; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 18px 22px;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-ico {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.faq-item[open] .faq-ico { transform: rotate(45deg); }
+.faq-resposta {
+  padding: 0 22px 18px;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+/* ─── RESPONSIVIDADE ─────────────────────────────── */
+@media (max-width: 820px) {
+  .sobre-grid { grid-template-columns: 1fr; }
+}

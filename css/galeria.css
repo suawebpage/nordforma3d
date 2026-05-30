@@ -1,0 +1,49 @@
+/* =====================================================
+   galeria.css — NordForma3D
+   Estilos específicos da página Galeria.
+   ===================================================== */
+
+/* ─── INTRO ──────────────────────────────────────── */
+.galeria-intro { padding: 72px 0 40px; }
+.galeria-instagram a { color: var(--blue-lt); font-weight: 600; }
+
+/* ─── CARROSSEL DESTAQUE ─────────────────────────── */
+.galeria-destaque { padding: 0 0 60px; }
+
+/* ─── GRID COMPLETO ──────────────────────────────── */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+.galeria-card {
+  aspect-ratio: 1;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  transition: border-color var(--tr);
+  cursor: default;
+}
+.galeria-card:hover { border-color: #444; }
+.galeria-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.galeria-card-icone    { font-size: 2.6rem; }
+.galeria-card-cat      { font-size: 12px; color: var(--muted); }
+
+/* ─── CTA ────────────────────────────────────────── */
+.galeria-cta { padding: 80px 0; text-align: center; }
+
+/* ─── RESPONSIVIDADE ─────────────────────────────── */
+@media (max-width: 540px) {
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+}
